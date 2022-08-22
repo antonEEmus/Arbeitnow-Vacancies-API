@@ -6,8 +6,8 @@
 
 ### Project Description
 
-This project uses public 3rd party API to download information about 500 most recent vacancies from 
-https://arbeitnow.com/api/job-board-api every hour using Cron Job.
+This project uses public 3rd party API to fetch information about 500 most recent vacancies from 
+https://arbeitnow.com/api/job-board-api to an in-memory database every hour using Cron Job.
 After that, it can respond to the requests in order to display the vacancies with pagination and sorting.
 
 The application is developed based on N-tier architecture, which contains of 3 levels:
