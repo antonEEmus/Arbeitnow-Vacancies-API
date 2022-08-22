@@ -13,7 +13,7 @@ After that, it can respond to the requests in order to display the vacancies wit
 The application is developed based on N-tier architecture, which contains of 3 levels:
 
 1. Controller - the level that receives requests from client, handles them, calls service methods and sends the response to the client.
-2. Service - the level that contains the business logic and call DAO methods to perform operations with the database.
+2. Service - the level that contains the business logic and call repository methods to perform operations with the database.
 3. Repository - the level that works with database and performs the CRUD operations.
 
 ---
