@@ -67,7 +67,7 @@ class VacancyControllerTest {
     @Test
     public void findTopByCreationDate_ok() {
         RestAssuredMockMvc.when()
-                .get("/vacancies/top-recent?limit=1")
+                .get("/vacancies/top-recent?count=1")
                 .then()
                 .statusCode(200)
                 .body("size()", Matchers.equalTo(1))

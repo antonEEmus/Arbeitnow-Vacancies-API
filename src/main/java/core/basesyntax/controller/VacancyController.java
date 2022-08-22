@@ -43,10 +43,10 @@ public class VacancyController {
 
     @GetMapping("/top-recent")
     public List<VacancyResponseDto> findTopByCreationDate(
-            @RequestParam(defaultValue = "10") Integer limit
+            @RequestParam(defaultValue = "10") Integer count
     ) {
         Sort.Order order = new Sort.Order(Sort.Direction.DESC, "createdAt");
-        PageRequest pageRequest = PageRequest.of(0, limit, Sort.by(order));
+        PageRequest pageRequest = PageRequest.of(0, count, Sort.by(order));
         return vacancyService.findTopByCreatedAt(pageRequest).stream()
                 .map(vacancyMapper::toDto)
                 .collect(Collectors.toList());
